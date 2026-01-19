@@ -3,17 +3,12 @@
 
 frappe.ui.form.on("PLM BOM Import Tool", {
 	refresh(frm) {
-		if (frm.doc && frm.doc.bom_parent_item) {
-			frm.remove_custom_button(__("Item Create"));
-			frm.remove_custom_button(__("BOM Create"));
-			frm.toggle_display("item_create", false);
-			frm.toggle_display("bom_create", false);
-		} else {
-			frm.toggle_display("item_create", true);
-			frm.toggle_display("bom_create", true);
-		}
+		toggle_create_buttons(frm);
 		add_bom_creator_button_from_parent(frm);
 		add_view_bom_button_from_log(frm);
+	},
+	bom_parent_item(frm) {
+		toggle_create_buttons(frm);
 	},
 	item_create(frm) {
 		if (!frm.doc.plm_file) {
@@ -73,6 +68,19 @@ frappe.ui.form.on("PLM BOM Import Tool", {
 		});
 	},
 });
+
+function toggle_create_buttons(frm) {
+	if (frm.doc && frm.doc.bom_parent_item) {
+		frm.remove_custom_button(__("Item Create"));
+		frm.remove_custom_button(__("BOM Create"));
+		frm.toggle_display("item_create", false);
+		frm.toggle_display("bom_create", false);
+		return;
+	}
+
+	frm.toggle_display("item_create", true);
+	frm.toggle_display("bom_create", true);
+}
 
 function add_bom_creator_button_from_log(frm) {
 	if (!frm.doc || !frm.doc.bom_creation_log) {

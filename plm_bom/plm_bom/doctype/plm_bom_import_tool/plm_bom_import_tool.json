@@ -43,7 +43,8 @@
    "allow_on_submit": 1,
    "fieldname": "item_creation_log",
    "fieldtype": "Code",
-   "label": "Item Creation Log"
+   "label": "Item Creation Log",
+   "no_copy": 1
   },
   {
    "fieldname": "column_break_esvs",
@@ -53,16 +54,15 @@
    "allow_on_submit": 1,
    "fieldname": "bom_creation_log",
    "fieldtype": "Code",
-   "label": "BOM Creation Log"
+   "label": "BOM Creation Log",
+   "no_copy": 1
   },
   {
-   "depends_on": "eval:doc.bom_parent_item",
    "fieldname": "item_create",
    "fieldtype": "Button",
    "label": "Item Create"
   },
   {
-   "depends_on": "bom_parent_item",
    "fieldname": "bom_create",
    "fieldtype": "Button",
    "label": "BOM Create"
@@ -88,13 +88,14 @@
    "fieldname": "bom_parent_item",
    "fieldtype": "Data",
    "label": "BOM Parent Item",
+   "no_copy": 1,
    "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-01-19 18:02:15.441218",
+ "modified": "2026-01-19 18:29:08.976591",
  "modified_by": "Administrator",
  "module": "PLM BOM",
  "name": "PLM BOM Import Tool",

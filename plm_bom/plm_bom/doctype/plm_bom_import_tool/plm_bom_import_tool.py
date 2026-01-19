@@ -174,11 +174,7 @@ def import_bom_creator(docname):
 		frappe.throw(_("Default currency is not set for company {0}.").format(company))
 
 	bom_creator = frappe.new_doc("BOM Creator")
-	bom_creator_name = root["item_code"]
-	if frappe.db.exists("BOM Creator", bom_creator_name):
-		frappe.throw(_("BOM Creator {0} already exists.").format(bom_creator_name))
-
-	bom_creator.name = bom_creator_name
+	bom_creator.name = get_unique_bom_creator_name(root["item_code"])
 	bom_creator.company = company
 	bom_creator.currency = currency
 	bom_creator.rm_cost_as_per = "Valuation Rate"
@@ -263,7 +259,7 @@ def import_bom_creator(docname):
 	summary = f"Created BOM Creator {bom_creator.name}. Items: {created}, Skipped: {skipped}, Errors: {errors}."
 	logs.insert(0, summary)
 	doc.bom_creation_log = "\n".join(logs)
-	doc.bom_parent_item = root["item_code"]
+	doc.bom_parent_item = bom_creator.name
 	doc.save(ignore_permissions=True)
 
 	return {"summary": summary, "log": doc.bom_creation_log, "bom_creator": bom_creator.name}
@@ -281,6 +277,19 @@ def get_bom_for_bom_creator(bom_creator):
 		order_by="creation desc",
 	)
 	return {"bom": bom_name}
+
+
+def get_unique_bom_creator_name(base_name):
+	base_name = cstr(base_name).strip()
+	if not frappe.db.exists("BOM Creator", base_name):
+		return base_name
+
+	index = 1
+	while True:
+		candidate = f"{base_name}-REV{index}"
+		if not frappe.db.exists("BOM Creator", candidate):
+			return candidate
+		index += 1
 
 
 def get_file(file_name):
