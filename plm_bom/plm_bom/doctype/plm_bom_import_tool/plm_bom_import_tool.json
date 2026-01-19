@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-01-19 13:46:14.944619",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_rger",
+  "naming_series",
+  "column_break_ende",
+  "posting_date",
+  "section_break_syfc",
+  "plm_file",
+  "section_break_rqmk",
+  "item_create",
+  "item_creation_log",
+  "column_break_esvs",
+  "bom_create",
+  "bom_creation_log",
+  "bom_parent_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_rger",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "naming_series",
+   "options": "PLM"
+  },
+  {
+   "fieldname": "column_break_ende",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rqmk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "item_creation_log",
+   "fieldtype": "Code",
+   "label": "Item Creation Log"
+  },
+  {
+   "fieldname": "column_break_esvs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "bom_creation_log",
+   "fieldtype": "Code",
+   "label": "BOM Creation Log"
+  },
+  {
+   "depends_on": "eval:doc.bom_parent_item",
+   "fieldname": "item_create",
+   "fieldtype": "Button",
+   "label": "Item Create"
+  },
+  {
+   "depends_on": "bom_parent_item",
+   "fieldname": "bom_create",
+   "fieldtype": "Button",
+   "label": "BOM Create"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_syfc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "plm_file",
+   "fieldtype": "Attach",
+   "label": "PLM File",
+   "read_only_depends_on": "bom_parent_item"
+  },
+  {
+   "fieldname": "bom_parent_item",
+   "fieldtype": "Data",
+   "label": "BOM Parent Item",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-19 18:02:15.441218",
+ "modified_by": "Administrator",
+ "module": "PLM BOM",
+ "name": "PLM BOM Import Tool",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manufacturing User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
