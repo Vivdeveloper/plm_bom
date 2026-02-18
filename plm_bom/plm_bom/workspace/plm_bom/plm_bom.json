@@ -1,7 +1,7 @@
 {
  "app": "plm_bom",
  "charts": [],
- "content": "[{\"id\":\"PLM001\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"PLM002\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"PLM BOM Import Tool\",\"col\":3}},{\"id\":\"PLM003\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BOM\",\"col\":3}},{\"id\":\"PLM004\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"PLM005\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item Barcode\",\"col\":3}},{\"id\":\"PLM006\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"PLM007\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Tools &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"PLM008\",\"type\":\"card\",\"data\":{\"card_name\":\"BOM Tools\",\"col\":4}},{\"id\":\"PLM009\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"PLM010\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "content": null,
  "creation": "2026-02-18 09:30:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
