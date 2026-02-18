@@ -1,0 +1,174 @@
+{
+ "app": "plm_bom",
+ "charts": [],
+ "content": "[{\"id\":\"PLM001\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"PLM002\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"PLM BOM Import Tool\",\"col\":3}},{\"id\":\"PLM003\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BOM\",\"col\":3}},{\"id\":\"PLM004\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"PLM005\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item Barcode\",\"col\":3}},{\"id\":\"PLM006\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"PLM007\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Tools &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"PLM008\",\"type\":\"card\",\"data\":{\"card_name\":\"BOM Tools\",\"col\":4}},{\"id\":\"PLM009\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":4}},{\"id\":\"PLM010\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "creation": "2026-02-18 09:30:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "folder-tree",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "PLM BOM",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM Tools",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "PLM BOM Import Tool",
+   "link_count": 0,
+   "link_to": "PLM BOM Import Tool",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "BOM",
+   "link_count": 0,
+   "link_to": "BOM",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Masters",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item Barcode",
+   "link_count": 0,
+   "link_to": "Item Barcode",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item Group",
+   "link_count": 0,
+   "link_to": "Item Group",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "Item",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Stock Balance",
+   "link_count": 0,
+   "link_to": "Stock Balance",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "BOM",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "BOM Search",
+   "link_count": 0,
+   "link_to": "BOM Search",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "BOM",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "BOM Stock Report",
+   "link_count": 0,
+   "link_to": "BOM Stock Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-02-18 09:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "PLM BOM",
+ "name": "PLM BOM",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 15.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "PLM BOM Import Tool",
+   "link_to": "PLM BOM Import Tool",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "BOM",
+   "link_to": "BOM",
+   "stats_filter": "{\"is_active\":[\"=\",1]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Item",
+   "link_to": "Item",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Item Barcode",
+   "link_to": "Item Barcode",
+   "type": "DocType"
+  }
+ ],
+ "title": "PLM BOM",
+ "type": "Workspace"
+}
